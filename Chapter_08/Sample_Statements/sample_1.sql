@@ -1,5 +1,5 @@
 USE SalesOrdersExample
 
-SELECT Products.ProductNumber, Products.ProductName, Products.ProductDescription, Products.CategoryID
+SELECT Products.ProductNumber, Products.ProductName, Categories.CategoryDescription
 FROM Products
 INNER JOIN Categories ON Categories.CategoryID = Products.CategoryID
