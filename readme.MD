@@ -2,6 +2,8 @@
 
 Welcome! This is my personal journey through the book **_SQL for Mere Mortals_** by Michael J. Hernandez and John L. Viescas. I'm using this repo to post my progress, notes, and solutions as I work through the book's exercises and examples. It's a hands-on learning log more than anything else! 🛠️📚
 
+I used SQL in my day to day job, this book helps clear up any missing gaps :)
+
 ## 🚀 About the Book
 
 *SQL for Mere Mortals* is a beginner-friendly, practical introduction to relational databases and SQL. It explains the fundamentals in a clear, non-intimidating way—perfect for folks who are new to databases or want a solid refresher.
