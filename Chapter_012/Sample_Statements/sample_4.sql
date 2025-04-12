@@ -1,0 +1,5 @@
+USE EntertainmentAgencyExample
+
+SELECT SUM(ContractPrice)  AS SUMPRICE
+FROM ENGAGEMENTS
+WHERE StartDate BETWEEN '2017-10-01' AND '2017-10-31'
