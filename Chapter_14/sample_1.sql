@@ -1,0 +1,9 @@
+USE SalesORdersExample
+
+SELECT Customers.CustFirstName + ' ' + Customers.CustLastName AS CustFullName, Orders.OrderDate, SUM(Order_Details.QuotedPrice * Order_Details.QuantityOrdered)
+FROM Customers
+INNER JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+INNER JOIN Order_Details ON Order_Details.OrderNumber = Orders.OrderNumber
+GROUP BY Customers.CustFirstName + ' ' + Customers.CustLastName, Orders.OrderDate
+HAVING SUM(Order_Details.QuotedPrice * Order_Details.QuantityOrdered) > 1000
+ORDER BY 1,2
