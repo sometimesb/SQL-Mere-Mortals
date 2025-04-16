@@ -1,0 +1,7 @@
+USE RecipesExample
+
+SELECT Ingredient_Classes.IngredientClassDescription, COUNT(DISTINCT Recipe_ingredients.RecipeID) AS RecipeCountPerIngredient
+FROM Ingredient_Classes
+INNER JOIN Ingredients ON Ingredient_Classes.IngredientClassID = Ingredients.IngredientClassID
+INNER JOIN Recipe_Ingredients ON Recipe_Ingredients.IngredientID = Ingredients.IngredientID
+GROUP BY Ingredient_Classes.IngredientClassDescription
