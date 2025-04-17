@@ -13,13 +13,14 @@ GROUP BY Students.StudentID, Students.StudFirstName, Students.StudLastName, Stud
 UPDATE Students
 SET Students.StudGPA = GPAData.CalculatedGPA
 FROM Students
-INNER JOIN(
-    SELECT Student_Schedules.StudentID,ROUND(SUM(Classes.Credits * Student_Schedules.Grade) * 1.0 / NULLIF(SUM(Classes.Credits), 0), 3) AS CalculatedGPA
+INNER JOIN
+(   SELECT Student_Schedules.StudentID,ROUND(SUM(Classes.Credits * Student_Schedules.Grade) * 1.0 / NULLIF(SUM(Classes.Credits), 0), 3) AS CalculatedGPA
     FROM Student_Schedules
     INNER JOIN Classes ON Classes.ClassID = Student_Schedules.ClassID
     WHERE Student_Schedules.ClassStatus=2
     GROUP BY Student_Schedules.StudentID
-) AS GPAData ON Students.StudentID = GPAData.StudentID
+) AS GPAData 
+ON Students.StudentID = GPAData.StudentID
 
 
 
