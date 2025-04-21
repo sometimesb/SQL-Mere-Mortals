@@ -16,3 +16,4 @@ AND Recipes.RecipeID  NOT IN
 	FROM Recipe_Ingredients
 	INNER JOIN Ingredients ON Ingredients.IngredientID = Recipe_Ingredients.IngredientID
 	WHERE Ingredients.IngredientName = 'Carrot')
+	
